@@ -1,2 +1,2 @@
-# Krishna-Juice-Juice-QR-Code
-Miracle Grape Juice Rs : 40
+# Anajan A U Portfolio
+
