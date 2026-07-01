@@ -829,23 +829,60 @@ footer em{color:var(--gold);font-style:normal}
   .sep{margin:0 3rem}
 }
 @media(max-width:768px){
+  body{cursor:auto}
   .nav-links{display:none}
   .nav-ham{display:flex}
-  #hero{padding:6.5rem 1.8rem 4rem;gap:2.5rem}
-  section{padding:4rem 1.8rem}
-  .sep{margin:0 1.8rem}
-  #resume{padding:4rem 1.8rem}
+  #nav{padding:1rem 1.2rem}
+  .nav-drawer{top:58px;padding:1.2rem 1.2rem 1.4rem}
+  #hero{padding:6.2rem 1.2rem 3.6rem;gap:2.2rem}
+  .hero-left{display:flex;flex-direction:column;align-items:center;text-align:center}
+  .hero-bio{margin-left:auto;margin-right:auto}
+  .hero-btns{justify-content:center}
+  .hero-stats{flex-wrap:wrap;justify-content:center;gap:1rem}
+  .stat{border-right:none;padding:0;margin-right:0}
+  .hero-right{order:0;justify-content:center}
+  .portrait-wrap{width:min(100%,290px)}
+  .p-hint{right:.4rem;bottom:1.3rem}
+  section{padding:4rem 1.2rem}
+  .sep{margin:0 1.2rem}
+  #resume{padding:4rem 1.2rem}
+  .skills-grid{grid-template-columns:1fr}
+  .show-frame{padding:.45rem;margin-top:1.8rem}
+  .show-toolbar{flex-wrap:wrap;gap:.6rem;padding:0 .9rem 1rem}
+  .show-btn{width:100%}
+  .show-btn-ghost{width:100%}
   .cform-row{grid-template-columns:1fr}
-  #chat-panel{width:calc(100vw - 2rem);right:1rem;bottom:5.5rem}
-  #chat-fab{right:1.2rem;bottom:1.2rem}
-  #toast{right:1rem;bottom:9rem;max-width:calc(100vw - 2rem)}
-  .hero-stats{flex-wrap:wrap;gap:1.4rem}
-  .stat{border-right:none;padding:0}
+  #chat-panel{width:calc(100vw - 1.4rem);right:.7rem;bottom:5.5rem}
+  #chat-fab{right:1rem;bottom:1rem}
+  #toast{left:1rem;right:1rem;bottom:8.5rem;max-width:none}
+  .shadowbox{min-height:230px;margin:.8rem}
+  .rec-popup{padding:2rem 1.4rem}
 }
 @media(max-width:480px){
-  .portrait-wrap{width:100%;max-width:310px}
-  .hero-btns{flex-direction:column;align-items:flex-start}
+  body{font-size:15px}
+  #nav{padding:.9rem 1rem}
+  .nav-brand{font-size:1.2rem}
+  #hero{padding:5.8rem 1rem 3rem;gap:1.8rem}
+  .hero-pill{font-size:.6rem;padding:.34rem .8rem}
+  .hero-h1{font-size:2.45rem;line-height:1.05}
+  .hero-role,.hero-bio{font-size:.9rem}
+  .portrait-wrap{width:100%;max-width:300px}
+  .portrait-card img{height:380px}
+  .hero-btns{flex-direction:column;align-items:stretch;width:100%}
   .btn-primary,.btn-outline,.btn-call{width:100%;justify-content:center}
+  section{padding:3.4rem 1rem}
+  #resume{padding:3.4rem 1rem}
+  .sec-title{font-size:clamp(1.7rem,7vw,2.2rem)}
+  .skill-card{padding:1.3rem 1.05rem}
+  .show-frame{padding:.3rem}
+  .shadowbox{min-height:210px;margin:.6rem}
+  .show-scroll-panel{padding:1rem}
+  .show-toolbar{padding:0 .7rem .9rem}
+  .cal-widget{max-width:210px}
+  .cal-widget.open{max-height:270px}
+  .rec-popup{padding:1.7rem 1.1rem}
+  .rec-popup-actions{flex-direction:column}
+  .rec-popup-btn{width:100%}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
@@ -2218,7 +2255,7 @@ async function handleInput(input){
 /* ─── Init conversation ─── */
 async function initChat(){
   state='welcome';
-  await botReply('👋 Hello! Welcome to Anjana\'s portfolio assistant.',null,350);
+  await botReply('👋 Hello! Welcome to Anjana\'s assistant.',null,350);
   await botReply(
     'Thank you so much for visiting! 🙏 I\'m here to help you explore Anjana\'s work, download her resume, or connect with her directly. Recruiters and collaborators are always warmly welcomed here. How can I assist you today?',
     null, 1000
